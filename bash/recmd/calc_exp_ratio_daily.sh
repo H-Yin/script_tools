@@ -5,7 +5,7 @@
 #  Author      : H.Yin
 #  Email       : csustyinhao@gmail.com
 #  Created     : 2018-11-09 16:28:01(+0800)
-#  Modified    : 2018-11-09 17:54:46(+0800)
+#  Modified    : 2018-11-26 13:37:42(+0800)
 #  GitHub      : https://github.com/H-Yin/script_tools
 #  Description : calculte exp_ratio on a daily timescale
 #################################################################
@@ -26,7 +26,7 @@ if [[ -z $DAY ]]; then
     exit 127
 fi
 
-if [[ -z $2 ]]; then OUTPUT=$2; fi
+if [[ -n $2 ]]; then OUTPUT=$2; fi
 
 QUERY_EXP_SQL=$(cat <<-EOF
 USE $DATABASE;
